@@ -16,7 +16,7 @@ import eslint from 'gulp-eslint';
 const path = {
   scss: 'src/scss/index.scss',
   js: 'src/js/index.js',
-  image: 'scr/image/**/*.*',
+  image: 'src/image/**/*.*',
   font: 'src/fonts/**/*.*',
   php: 'src/**/*.php',
   html: 'src/**/*.html',
@@ -29,19 +29,18 @@ browserSync.create();
 
 function cleanDest(cb) {
   src(path.dest.local, {
-    read: false,
     allowEmpty: true
   }).pipe(cleanDir());
   cb();
 }
 
 function image(cb) {
-  src(path.image).pipe(dest(`${path.dest.local}image`));
+  src(path.image).pipe(dest(`${path.dest.local}image/`));
   cb();
 }
 
 function fonts(cb) {
-  src(path.font).pipe(dest(`${path.dest.local}fonts`));
+  src(path.font).pipe(dest(`${path.dest.local}fonts/`));
   cb();
 }
 

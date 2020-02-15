@@ -1,0 +1,9 @@
+.content {
+  background-color: $br_brand_clr;
+  padding: 80px;
+
+  &__title {
+    color: $header_link_clr;
+    font-size: $heading_font_size;
+  }
+}

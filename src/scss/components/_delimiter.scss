@@ -1,0 +1,20 @@
+.delimiter {
+  padding: 60px;
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    margin: 3px auto;
+    height: 1px;
+    width: 100px;
+    background-color: $delimiter_clr;
+  }
+
+  &::before {
+    transform: translateX(-5px);
+  }
+
+  &::after {
+    transform: translateX(5px);
+  }
+}

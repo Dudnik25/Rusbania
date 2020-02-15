@@ -1,0 +1,14 @@
+.about-us {
+  background-color: $br_brand_clr;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    padding: 0 20px;
+  }
+}

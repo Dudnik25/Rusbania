@@ -1,0 +1,14 @@
+.arrow-down {
+  width: 100%;
+
+  &__button {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px;
+    width: 100px;
+    color: $text_clr;
+    font-size: 40px;
+    cursor: pointer;
+  }
+}

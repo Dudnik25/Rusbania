@@ -1,0 +1,22 @@
+.nav {
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    display: block;
+    padding: 20px;
+    color: $header_link_clr;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
