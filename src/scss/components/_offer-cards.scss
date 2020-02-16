@@ -1,0 +1,8 @@
+.offer-cards {
+  @include flex('space-between');
+  list-style: none;
+
+  @include response(1024){
+    flex-direction: column;
+  }
+}

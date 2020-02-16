@@ -3,4 +3,8 @@
   font-size: $heading_font_size;
   text-transform: uppercase;
   text-align: center;
+
+  @include response($xs){
+    font-size: $price_font_size;
+  }
 }

@@ -2,13 +2,29 @@
   width: 100%;
 
   &__button {
-    display: block;
     text-align: center;
+    position: relative;
+    display: block;
     margin: 0 auto;
-    padding: 15px;
-    width: 100px;
-    color: $text_clr;
+    width: 50px;
+    height: 50px;
+    color: $header_link_clr;
     font-size: 40px;
     cursor: pointer;
+  }
+
+  &__icon {
+    font-size: 30px;
+    position: absolute;
+    padding-top: 8px;
+    left: 0; top: 0; bottom: 0; right: 0;
+
+    &:first-child {
+      transform: translateY(4px);
+    }
+
+    &:last-child {
+      transform: translateY(-4px);
+    }
   }
 }

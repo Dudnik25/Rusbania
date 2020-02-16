@@ -1,10 +1,13 @@
 .nav {
+  font-family: 'PT Sans',sans-serif;
+
+  @include response(1024){
+    display: none;
+  }
 
   &__list {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex('space-between');
   }
 
   &__item {

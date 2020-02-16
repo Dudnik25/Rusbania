@@ -126,7 +126,7 @@ function startWatch(cb) {
 }
 
 export const clean = series(cleanDest);
-export const build = series(cleanDest, parallel(html, php, css, js, image, fonts));
+export const build = parallel(html, php, css, js, image, fonts);
 const dev = series(parallel(html, php, css, js), startWatch);
 
 export default dev;

@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'AvenirNextCyr', sans-serif;
+}
+
+body, html {
+  font-family: 'AvenirNextCyr', Arial sans-serif;
   font-size: $font_size;
+
+  @include response($sm){
+    font-size: $font_size_sm;
+  }
 }

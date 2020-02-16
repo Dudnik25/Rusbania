@@ -3,6 +3,7 @@
 //  base
 
 @import "base/variables";
+@import "base/mixins";
 @import "base/base";
 @import "base/helpers";
 
@@ -15,6 +16,13 @@
 @import "components/title";
 @import "components/description";
 @import "components/delimiter";
+@import "components/service";
+@import "components/slider";
+@import "components/table";
+@import "components/offer";
+@import "components/offer-cards";
+@import "components/offer-card";
+@import "components/map";
 
 //  fonts
 
@@ -25,3 +33,8 @@
 @import "layout/header";
 @import "layout/first";
 @import "layout/about-us";
+@import "layout/services";
+@import "layout/kitchen";
+@import "layout/price";
+@import "layout/contacts";
+@import "layout/footer";

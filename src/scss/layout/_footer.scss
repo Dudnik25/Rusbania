@@ -1,0 +1,13 @@
+.footer {
+  background-color: $bg_second_clr;
+  text-align: center;
+  padding: 30px 30px;
+  font-size: $font_size;
+  color: $header_link_clr;
+
+  @include response($xs){
+    padding: 20px 5px;
+    font-size: $font_size_sm;
+  }
+
+}

@@ -1,5 +1,5 @@
 .delimiter {
-  padding: 60px;
+  padding: 10px;
 
   &::before, &::after {
     content: '';
@@ -8,6 +8,7 @@
     height: 1px;
     width: 100px;
     background-color: $delimiter_clr;
+    background: linear-gradient(90deg, rgba(44,204,195,0.4374124649859944) 0%, rgba(44,204,195,1) 51%, rgba(14,157,149,1) 100%);
   }
 
   &::before {

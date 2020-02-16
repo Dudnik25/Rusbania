@@ -1,6 +1,10 @@
 .container {
-  max-width: 1600px;
+  max-width: 1500px;
   padding: 150px 20px;
   margin-right: auto;
   margin-left: auto;
+
+  @include response($sm){
+    padding: 40px 20px;
+  }
 }

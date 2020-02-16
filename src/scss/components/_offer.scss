@@ -1,0 +1,23 @@
+.offer {
+  color: $header_link_clr;
+  font-family: 'PT Sans',sans-serif;
+
+  &__title {
+    font-size: $heading_font_size;
+    text-align: center;
+    padding: 30px;
+
+    @include response($xs){
+      padding: 15px;
+      font-size: $price_font_size;
+    }
+  }
+
+  &__cards {
+    margin-top: 30px;
+
+    @include response($xs){
+      margin-top: 0;
+    }
+  }
+}

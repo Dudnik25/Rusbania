@@ -1,6 +1,22 @@
 .description {
-  max-width: 1400px;
+  max-width: 100%;
   font-size: 1.3em;
   line-height: 1.5em;
   word-spacing: 4px;
+  color: $text_clr;
+
+  @include response($sm){
+    font-size: 1em;
+    line-height: 1.3em;
+    word-spacing: normal;
+  }
+
+  &__delimiter {
+    margin: 50px 0;
+
+    @include response($sm){
+      margin: 20px 0;
+    }
+  }
+
 }

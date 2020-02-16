@@ -1,20 +1,27 @@
 .logo {
   text-decoration: none;
   color: $header_link_clr;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
+  @include flex();
 
   &__img {
-    height: 70px;
+    height: 50px;
+
+    @include response($xs){
+      height: 30px;
+    }
   }
 
   &__title {
+    font-size: 1rem;
     margin-left: 20px;
     text-align: center;
     text-transform: uppercase;
     transform: skewY(-4deg);
     font-family: 'PT Sans', sans-serif;
+
+    @include response($xs){
+      margin-left: 5px;
+    }
   }
 }

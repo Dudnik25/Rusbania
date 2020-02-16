@@ -1,0 +1,23 @@
+.kitchen {
+  background-color: $bg_brand_clr;
+
+  &__footer {
+    text-align: center;
+    color: #e20f00;
+    font-size: $price_font_size;
+    padding: 40px;
+
+    @include response($sm){
+      padding: 40px 0;
+      font-size: 1rem;
+    }
+  }
+
+  &__table {
+    margin-bottom: 50px;
+
+    @include response($xs){
+      margin-bottom: 30px;
+    }
+  }
+}

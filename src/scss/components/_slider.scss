@@ -1,0 +1,16 @@
+.slider {
+  overflow: hidden;
+  line-height: 0;
+
+  &__list {
+    @include flex('flex-start');
+  }
+
+  &__item {
+    flex: 0 0 100%;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
