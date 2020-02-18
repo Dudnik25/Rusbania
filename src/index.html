@@ -19,6 +19,7 @@
   русская баня на осокорках, бани киева на дровах, баня сруб киев, Заказать русскую баню в киеве, настоящая русская баня в киеве, русская баня в киеве недорого,
   бани брус киев, киев баня на дровах, русская баня не дорого, Украина Киев">
   <link href="css/main.min.css" rel="stylesheet">
+  <script defer src="js/libs/smooth-scroll.polyfills.min.js"></script>
   <script defer src="js/main.min.js"></script>
 </head>
 <body>
@@ -29,23 +30,26 @@
         <h3 class="logo__title">Комплекс бань<br>на воде</h3>
       </a>
       <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#about-us" class="nav__link">О нас</a>
+        <ul class="nav__list nav-list">
+          <li class="nav-list__item">
+            <a href="#about-us" class="nav-list__link">О нас</a>
           </li>
-          <li class="nav__item">
-            <a href="#services" class="nav__link">Бани</a>
+          <li class="nav-list__item">
+            <a href="#services" class="nav-list__link">Бани</a>
           </li>
-          <li class="nav__item">
-            <a href="#kitchen" class="nav__link">Кухня</a>
+          <li class="nav-list__item">
+            <a href="#kitchen" class="nav-list__link">Кухня</a>
           </li>
-          <li class="nav__item">
-            <a href="#price" class="nav__link">Стоимость</a>
+          <li class="nav-list__item">
+            <a href="#price" class="nav-list__link">Стоимость</a>
           </li>
-          <li class="nav__item">
-            <a href="#contacts" class="nav__link">Контакты</a>
+          <li class="nav-list__item">
+            <a href="#contacts" class="nav-list__link">Контакты</a>
           </li>
         </ul>
+        <div class="nav__burger-button burger-button">
+          <span class="burger-button__inner"></span>
+        </div>
       </nav>
     </div>
   </header>
@@ -54,7 +58,7 @@
       <h1 class="content__title">Добро пожаловать в комплекс бань на берегу залива Днепра</h1>
     </div>
     <div class="first__footer arrow-down">
-      <a href="#about-us" class="arrow-down__button">
+      <a href="#about-us" class="arrow-down__button" aria-label="О нас">
         <i class="arrow-down__icon demo-icon icon-down-open-big"></i>
         <i class="arrow-down__icon demo-icon icon-down-open-big"></i>
       </a>
@@ -171,7 +175,7 @@
       </div>
 
       <div class="kitchen__table table">
-        <h3 class="table__title">Мангал (предварительный заказ)</h3>
+        <h3 class="table__title">Мангал (предварительный&nbsp;заказ)</h3>
         <ul class="table__list">
           <li class="table__item">
             <p class="table__item-title">Шашлык</p>
@@ -307,7 +311,7 @@
   </section>
   <section id="contacts" class="contacts">
     <div class="contacts__map map">
-      <iframe class="map__iframe" frameborder="0" src="https://www.google.com/maps/d/embed?mid=1lFS-Rb9TiVyT6ShIZqxrCmhBnLanemD9"></iframe>
+      <iframe class="map__iframe" title="Карта" frameborder="0" src="https://www.google.com/maps/d/embed?mid=1lFS-Rb9TiVyT6ShIZqxrCmhBnLanemD9"></iframe>
     </div>
     <div class="contacts__info">
       <h2 class="contacts__title title">Контакты</h2>

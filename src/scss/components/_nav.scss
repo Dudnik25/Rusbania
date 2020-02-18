@@ -1,17 +1,38 @@
 .nav {
   font-family: 'PT Sans',sans-serif;
+}
+
+.nav-list {
+  list-style: none;
+  @include flex('space-between');
+  text-align: center;
 
   @include response(1024){
-    display: none;
+    position: fixed;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $bg_second_clr;
+    z-index: -1;
+    transition: all .3s ease-in-out;
   }
 
-  &__list {
-    list-style: none;
-    @include flex('space-between');
+  &_active {
+    width: 100%;
+    opacity: 1;
   }
 
   &__item {
-
+    @include response(1024) {
+      margin: 5px 0;
+      font-weight: bold;
+      min-width: 150px;
+    }
   }
 
   &__link {

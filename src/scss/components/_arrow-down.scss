@@ -11,6 +11,11 @@
     color: $header_link_clr;
     font-size: 40px;
     cursor: pointer;
+    animation: flyUp 3s 2s infinite;
+
+    &:hover {
+      animation-play-state: paused
+    }
   }
 
   &__icon {
@@ -27,4 +32,10 @@
       transform: translateY(-4px);
     }
   }
+}
+
+@keyframes flyUp {
+  0% {transform: translateY(0);}
+  20% {transform: translateY(-10px);}
+  40%, 100% {transform: translateY(0);}
 }
