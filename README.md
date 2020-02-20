@@ -1,4 +1,4 @@
 # Rusbanya || Комплекс бань на заливе Днепра
 Landing Page http://rusbanya.kiev.ua/
 
-![Alt text](GooglePageSpeedTest.jpg?raw=true "GooglePageSpeedTest")
+![Screenshot](GooglePageSpeedTest.jpg?raw=true "GooglePageSpeedTest")
