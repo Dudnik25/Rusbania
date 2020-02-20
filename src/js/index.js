@@ -14,7 +14,8 @@ import loadMap  from './helpers/loadMap';
 const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 800,
   speedAsDuration: true,
-  header: '.header'
+  header: '.header',
+  updateURL: false,
 });
 
 // Swiper slider https://github.com/nolimits4web/swiper
