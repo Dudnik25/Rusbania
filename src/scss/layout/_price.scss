@@ -1,0 +1,12 @@
+.price {
+  background-color: $bg_second_clr;
+
+  &__title {
+    color: $header_link_clr;
+  }
+
+  &__table {
+    color: $header_link_clr;
+    margin-bottom: 50px;
+  }
+}

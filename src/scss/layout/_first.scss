@@ -1,0 +1,69 @@
+.first {
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  @include flex('flex-end', 'flex-start', 'column');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @include response(1400){
+     align-items: center;
+   }
+
+  @include response($sm){
+    min-height: 400px;
+  }
+
+  &__header {
+    margin-left: 200px;
+    margin-bottom: 200px;
+    max-width: 800px;
+    z-index: 10;
+
+    @include response(1700){
+      margin-left: 50px;
+    }
+
+    @include response(1400){
+      margin-left: 30px;
+      margin-right: 30px;
+      text-align: center;
+    }
+
+    @include response($sm){
+      margin-bottom: 100px;
+    }
+
+    @include response($xs){
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  &__background {
+    overflow: hidden;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: $first_background_clr;
+  }
+
+  &__bg-img {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: cover;
+  }
+
+  &__footer {
+    margin-bottom: 30px;
+    text-align: center;
+    z-index: 10;
+  }
+}

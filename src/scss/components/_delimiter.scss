@@ -1,0 +1,21 @@
+.delimiter {
+  padding: 10px;
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    margin: 3px auto;
+    height: 1px;
+    width: 100px;
+    background-color: $delimiter_clr;
+    background: linear-gradient(90deg, rgba(44,204,195,0.4374124649859944) 0%, rgba(44,204,195,1) 51%, rgba(14,157,149,1) 100%);
+  }
+
+  &::before {
+    transform: translateX(-5px);
+  }
+
+  &::after {
+    transform: translateX(5px);
+  }
+}

@@ -1,0 +1,11 @@
+.about-us {
+  background-color: $bg_brand_clr;
+
+  &__inner {
+    @include flex('center', 'center', 'column');
+  }
+
+  &__title {
+    padding: 0 20px;
+  }
+}

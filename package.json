@@ -17,11 +17,12 @@
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "browser-sync": "^2.26.7",
-    "eslint": "^6.1.0",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-esnext": "^4.0.0",
     "eslint-config-node": "^4.0.0",
     "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.2",
     "gulp": "^4.0.2",
@@ -32,7 +33,9 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify-es": "^2.0.0",
     "node-normalize-scss": "^8.0.1",
     "prettier": "1.19.1",
@@ -41,6 +44,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
-    "core-js": "^3.6.4"
+    "aos": "^2.3.4",
+    "core-js": "^3.6.4",
+    "smooth-scroll": "^16.1.2"
   }
 }

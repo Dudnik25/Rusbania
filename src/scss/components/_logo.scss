@@ -1,0 +1,23 @@
+.logo {
+  text-decoration: none;
+  color: $header_link_clr;
+  cursor: pointer;
+  @include flex();
+
+  &__img {
+    height: 50px;
+
+    @include response($xs){
+      height: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    margin-left: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    transform: skewY(-4deg);
+    font-family: 'PT Sans', sans-serif;
+  }
+}

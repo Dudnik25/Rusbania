@@ -1,0 +1,18 @@
+//  Flex
+
+@mixin flex($jc: 'center', $ai: 'center', $fd: false) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  @if $fd {
+    flex-direction: $fd;
+  }
+}
+
+//  Media
+
+@mixin response($width) {
+  @media screen and (max-width: $width + 'px') {
+    @content;
+  }
+}
