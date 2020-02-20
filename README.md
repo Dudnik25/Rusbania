@@ -1,2 +1,2 @@
-# Rusanya || Комплекс бань на заливе Днепра
+# Rusbanya || Комплекс бань на заливе Днепра
 Landing Page http://rusbanya.kiev.ua/
