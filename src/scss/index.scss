@@ -1,4 +1,6 @@
 @import "normalize";
+@import "libs/swiper.min.css";
+@import "libs/aos.css";
 
 //  base
 
@@ -24,6 +26,8 @@
 @import "components/offer-card";
 @import "components/map";
 @import "components/burger-button";
+@import "components/preloader";
+@import "components/arrow-go-top";
 
 //  fonts
 

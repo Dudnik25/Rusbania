@@ -2,6 +2,7 @@ export default class Header {
   constructor(selector) {
     this.name = selector.replace(/[\.,\#]/g, '');
     this.header = document.querySelector(selector);
+    this.changeBackground();
     this.addEvent();
   }
 

@@ -14,14 +14,10 @@
 
   &__title {
     font-size: 1rem;
-    margin-left: 20px;
+    margin-left: 5px;
     text-align: center;
     text-transform: uppercase;
     transform: skewY(-4deg);
     font-family: 'PT Sans', sans-serif;
-
-    @include response($xs){
-      margin-left: 5px;
-    }
   }
 }

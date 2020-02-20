@@ -12,10 +12,13 @@ import babel from 'rollup-plugin-babel';
 import sass from 'gulp-sass';
 import normalize from 'node-normalize-scss';
 import eslint from 'gulp-eslint';
+import imagemin from 'gulp-imagemin';
+import sourcemaps from 'gulp-sourcemaps';
 
 const path = {
   scss: 'src/scss/index.scss',
   js: 'src/js/index.js',
+  jsLibs: 'src/js/libs/**/*.js',
   image: 'src/image/**/*.*',
   font: 'src/fonts/**/*.*',
   php: 'src/**/*.php',
@@ -35,7 +38,9 @@ function cleanDest(cb) {
 }
 
 function image(cb) {
-  src(path.image).pipe(dest(`${path.dest.local}image/`));
+  src(path.image)
+    .pipe(imagemin())
+    .pipe(dest(`${path.dest.local}image/`));
   cb();
 }
 
@@ -59,8 +64,17 @@ function css(cb) {
   cb();
 }
 
+function jsLibs(cb) {
+  src(path.jsLibs)
+    .pipe(concat('libs.min.js'))
+    .pipe(uglify())
+    .pipe(dest(`${path.dest.local}js/libs`));
+  cb();
+}
+
 function js(cb) {
   src(path.js)
+    //.pipe(sourcemaps.init())
     .pipe(eslint())
     .pipe(
       rollup(
@@ -96,6 +110,7 @@ function js(cb) {
     )
     .pipe(concat('main.min.js'))
     .pipe(uglify())
+    //.pipe(sourcemaps.write())
     .pipe(dest(`${path.dest.local}js`));
   cb();
 }
@@ -119,14 +134,15 @@ function startWatch(cb) {
     open: false
   });
   watch('src/scss/**/*.scss', parallel(css)).on('change', browserSync.reload);
-  watch('src/js/**/*.js', parallel(js)).on('change', browserSync.reload);
+  watch('src/js/**/*.js', parallel(js, jsLibs)).on('change', browserSync.reload);
   watch('src/**/*.php', parallel(php)).on('change', browserSync.reload);
   watch('src/**/*.html', parallel(html)).on('change', browserSync.reload);
+  watch('src/image/**/*.*', parallel(image)).on('change', browserSync.reload);
   cb();
 }
 
 export const clean = series(cleanDest);
-export const build = parallel(html, php, css, js, image, fonts);
-const dev = series(parallel(html, php, css, js), startWatch);
+export const build = parallel(html, php, css, js, jsLibs, image, fonts);
+const dev = series(parallel(html, php, css, js, jsLibs), startWatch);
 
 export default dev;

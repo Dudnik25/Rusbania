@@ -1,13 +1,11 @@
 export default class FullHeightFix {
   constructor(selector) {
     this.section = document.querySelector(selector);
-    this.screenHeight = window.innerHeight;
-    this.sectionHeight = this.section.offsetHeight;
     this.addEvent();
-    this.resize();
   }
 
   addEvent() {
+    window.addEventListener('load', this.resize.bind(this));
     window.addEventListener('resize', this.resize.bind(this));
   }
 
@@ -16,9 +14,7 @@ export default class FullHeightFix {
   }
 
   resize() {
-    this.screenHeight = window.innerHeight;
-    this.sectionHeight = this.section.offsetHeight;
-    if (this.screenHeight !== this.sectionHeight) {
+    if (window.innerHeight !== this.section.offsetHeight) {
       this.fixHeight();
     }
   }

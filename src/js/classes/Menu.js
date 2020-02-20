@@ -10,9 +10,9 @@ export default class Menu {
   addEvent() {
     this.burgerBtn.addEventListener('click', this.toggle.bind(this));
     window.addEventListener('resize', this.resize.bind(this));
-    [...this.links].forEach((element) => {
-      element.addEventListener('click', this.close.bind(this));
-    });
+    for (let link of this.links) {
+      link.addEventListener('click', this.close.bind(this));
+    }
   }
 
   close() {

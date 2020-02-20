@@ -1,13 +1,15 @@
 .contacts {
   @include flex('space-between');
   background-color: $bg_brand_clr;
+  overflow-x: hidden;
+  max-width: 100%;
 
   @include response(1024){
     flex-direction: column;
   }
 
   &__map, &__info {
-    flex: 0 0 50%;
+    width: 50%;
 
     @include response(1024){
       width: 100%;

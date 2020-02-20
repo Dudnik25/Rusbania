@@ -1,8 +1,12 @@
 .first {
   height: 100vh;
-  min-height: 800px;
+  min-height: 600px;
   position: relative;
+  overflow: hidden;
   @include flex('flex-end', 'flex-start', 'column');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 
   @include response(1400){
      align-items: center;
@@ -16,6 +20,7 @@
     margin-left: 200px;
     margin-bottom: 200px;
     max-width: 800px;
+    z-index: 10;
 
     @include response(1700){
       margin-left: 50px;
@@ -43,7 +48,7 @@
     top: 0; bottom: 0; left: 0; right: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 5;
     background-color: $first_background_clr;
   }
 
@@ -59,5 +64,6 @@
   &__footer {
     margin-bottom: 30px;
     text-align: center;
+    z-index: 10;
   }
 }

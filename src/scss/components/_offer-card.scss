@@ -1,17 +1,14 @@
 .offer-card {
-  width: 50%;
+  width: 33.333%;
   padding: 2px;
   border-radius: 10px;
-  margin: 30px 50px;
+  margin: 30px 10px;
   background-color: $delimiter_clr;
   background: linear-gradient(90deg, rgba(44,204,195,0.4374124649859944) 0%, rgba(44,204,195,1) 51%, rgba(14,157,149,1) 100%);
 
-  @include response($lg){
-    margin: 30px 15px;
-  }
-
   @include response(1024){
     width: 100%;
+    height: 100%;
     max-width: 500px;
   }
 
@@ -32,8 +29,9 @@
     text-align: center;
     font-size: $price_font_size;
 
-    @include response($xs){
-      padding: 20px 10px;
+    @include response($lg) {
+      font-size: 1.3rem;
+      padding: 40px 10px;
     }
   }
 
@@ -42,6 +40,11 @@
     padding: 10px 40px;
 
     @include response($xs){
+      padding: 10px 10px;
+    }
+
+    @include response($lg) {
+      font-size: 0.9rem;
       padding: 10px 10px;
     }
   }

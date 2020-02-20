@@ -2,16 +2,18 @@
 
 @font-face {
   font-family: "AvenirNextCyr";
-  src: url("../fonts/AvenirNextCyr/AvenirNextCyr-Bold.eot?") format("eot"),
-  url("../fonts/AvenirNextCyr/AvenirNextCyr-Bold.woff") format("woff"),
+  font-display: swap;
+  src: url("../fonts/AvenirNextCyr/AvenirNextCyr-Bold.woff") format("woff"),
+  url("../fonts/AvenirNextCyr/AvenirNextCyr-Bold.eot?") format("eot"),
   url("../fonts/AvenirNextCyr/AvenirNextCyr-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "AvenirNextCyr";
-  src: url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.eot?") format("eot"),
-  url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.woff") format("woff"),
+  font-display: swap;
+  src: url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.woff") format("woff"),
+  url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.eot?") format("eot"),
   url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.ttf") format("truetype");
   font-weight: normal;
 }
@@ -20,13 +22,19 @@
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/PTSans/PTSans-Regular.ttf") format("truetype");
+  font-display: swap;
+  src: url("../fonts/PTSans/ptsans.woff2") format("woff2"),
+  url("../fonts/PTSans/ptsans.woff") format("woff"),
+  url("../fonts/PTSans/ptsans.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/PTSans/PTSans-Bold.ttf") format("truetype");
+  font-display: swap;
+  src: url("../fonts/PTSans/ptsansbold.woff2") format("woff2"),
+  url("../fonts/PTSans/ptsansbold.woff") format("woff"),
+  url("../fonts/PTSans/ptsansbold.ttf") format("truetype");
   font-weight: bold;
 }
 
@@ -34,12 +42,13 @@
 
 @font-face {
   font-family: 'fontello';
-  src: url('../fonts/icons/fontello.eot?82199675');
-  src: url('../fonts/icons/fontello.eot?82199675#iefix') format('embedded-opentype'),
-  url('../fonts/icons/fontello.woff2?82199675') format('woff2'),
-  url('../fonts/icons/fontello.woff?82199675') format('woff'),
-  url('../fonts/icons/fontello.ttf?82199675') format('truetype'),
-  url('../fonts/icons/fontello.svg?82199675#fontello') format('svg');
+  font-display: swap;
+  src: url('../fonts/icons/fontello.eot?82199676');
+  src: url('../fonts/icons/fontello.eot?82199676#iefix') format('embedded-opentype'),
+  url('../fonts/icons/fontello.woff2?82199676') format('woff2'),
+  url('../fonts/icons/fontello.woff?82199676') format('woff'),
+  url('../fonts/icons/fontello.ttf?82199676') format('truetype'),
+  url('../fonts/icons/fontello.svg?82199676#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -90,3 +99,4 @@
 }
 
 .icon-down-open-big:before { content: '\e800'; } /* '' */
+.icon-up-circled:before { content: '\e801'; } /* '' */
