@@ -1,4 +1,4 @@
-const loadMap = function () {
+const loadMap = () => {
   const map = document.querySelector('.map__iframe');
   let mapTop = map.getBoundingClientRect().top;
 

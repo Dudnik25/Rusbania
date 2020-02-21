@@ -17,6 +17,7 @@
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "browser-sync": "^2.26.7",
+    "core-js": "^3.6.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-esnext": "^4.0.0",
@@ -35,7 +36,6 @@
     "gulp-eslint": "^6.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify-es": "^2.0.0",
     "node-normalize-scss": "^8.0.1",
     "prettier": "1.19.1",
@@ -43,9 +43,7 @@
     "rollup-plugin-babel": "^4.3.3"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.8.3",
     "aos": "^2.3.4",
-    "core-js": "^3.6.4",
     "smooth-scroll": "^16.1.2"
   }
 }

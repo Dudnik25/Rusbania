@@ -13,7 +13,6 @@ import sass from 'gulp-sass';
 import normalize from 'node-normalize-scss';
 import eslint from 'gulp-eslint';
 import imagemin from 'gulp-imagemin';
-import sourcemaps from 'gulp-sourcemaps';
 
 const path = {
   scss: 'src/scss/index.scss',
@@ -74,7 +73,6 @@ function jsLibs(cb) {
 
 function js(cb) {
   src(path.js)
-    //.pipe(sourcemaps.init())
     .pipe(eslint())
     .pipe(
       rollup(
@@ -110,7 +108,6 @@ function js(cb) {
     )
     .pipe(concat('main.min.js'))
     .pipe(uglify())
-    //.pipe(sourcemaps.write())
     .pipe(dest(`${path.dest.local}js`));
   cb();
 }
@@ -138,6 +135,7 @@ function startWatch(cb) {
   watch('src/**/*.php', parallel(php)).on('change', browserSync.reload);
   watch('src/**/*.html', parallel(html)).on('change', browserSync.reload);
   watch('src/image/**/*.*', parallel(image)).on('change', browserSync.reload);
+  watch('src/fonts/**/*.*', parallel(fonts)).on('change', browserSync.reload);
   cb();
 }
 

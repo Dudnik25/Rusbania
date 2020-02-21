@@ -1,6 +1,6 @@
 export default class Preloader {
   constructor(selector) {
-    this.name = selector.replace(/[\.,\#]/g, '');
+    this.name = selector.replace(/[.#]/g, '');
     this.preloader = document.querySelector(selector);
     this.addEvent();
   }

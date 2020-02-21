@@ -1,5 +1,5 @@
-const showBtnGoTop = (selector) => {
-  const className = selector.replace(/[\.,\#]/, '');
+const showBtnGoTop = selector => {
+  const className = selector.replace(/[.#]/, '');
   const btn = document.querySelector(selector);
 
   window.addEventListener('scroll', () => {

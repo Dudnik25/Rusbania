@@ -10,9 +10,9 @@ export default class Menu {
   addEvent() {
     this.burgerBtn.addEventListener('click', this.toggle.bind(this));
     window.addEventListener('resize', this.resize.bind(this));
-    for (let link of this.links) {
-      link.addEventListener('click', this.close.bind(this));
-    }
+    Array.from(this.links).forEach(element => {
+      element.addEventListener('click', this.close.bind(this));
+    });
   }
 
   close() {
@@ -24,7 +24,7 @@ export default class Menu {
   toggle() {
     this.burgerBtn.classList.toggle('burger-button_active');
     this.burgerList.classList.toggle(`nav-list_active`);
-    this.menuOpen = this.menuOpen ? false : true;
+    this.menuOpen = !this.menuOpen;
   }
 
   resize(e) {
